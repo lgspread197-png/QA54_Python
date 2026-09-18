@@ -55,7 +55,7 @@ print(k)
 # поиск и подсчет index(), count(), in (если что-то в коллекции)  not in
 m = ["apple","banana","cherry","orange"]
 print(m.index("cherry")) #2
-print(m.count("banana")) #2
+print(m.count("banana")) #1
 print("apple" in m)  # True
 print("kivi" not in m)  # True
 
@@ -63,7 +63,7 @@ print("____________")
 # сортировка  sort(), sorted(), reverse()
 #sort() - отсортировывает и возвращает пустоту
 #sorted() - отсортировывает и возвращает новый отсортированный список
-#reverse() - не отсортировывает, а просто переворацивает (если надо отсортировать еще, надо применить 2 метода)
+#reverse() - не отсортировывает, а просто переворачивает (если надо отсортировать еще, надо применить 2 метода)
 numbers = [3,1,5,2,9,6]
 result = numbers.sort()
 print(numbers,result)
@@ -80,7 +80,7 @@ print()
 numbers_4 = [3,1,5,2,9,6]
 print(sorted(numbers_4,reverse=True))
 print(numbers_4)
-# мы сначала отсортировали и вернули, а потом на новой строчке развернули
+# мы отсортировали и развернули
 
 print("____________")
 #перебор
