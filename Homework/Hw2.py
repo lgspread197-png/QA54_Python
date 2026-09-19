@@ -16,7 +16,17 @@ def clean_cart2(cart,elem_del):
 
 print(clean_cart2(["milk", "sold out", "bread", "sold out", "coffee"],"sold out"))
 # ["milk", "bread", "coffee"]
-print(clean_cart2(["milk", "sold out", "bread", "sold out", "coffee"],"empty"))
+print(clean_cart2(["milk", "sold out", "bread", "sold out", "coffee"],"test"))
+print()
+
+#var3
+def clean_cart2(cart,elem_del="sold out"):
+    while elem_del in cart:
+        cart.remove(elem_del)
+    return cart
+
+print(clean_cart2(["milk", "sold out", "bread", "sold out", "coffee"]))
+# ["milk", "bread", "coffee"]
 print()
 
 #Task 2. Temperature report
@@ -32,13 +42,13 @@ print(temperature_report([21, 28, 19, 31, 25, 27]))
 
 #Task 3. Fix negative balances
 def fix_balances(balances):
-    result2 = []
+    result = []
     for i in balances:
         if i<=0:
-            result2.append(0)
+            result.append(0)
         if i>0:
-            result2.append(i)
-    return result2
+            result.append(i)
+    return result
 
 print(fix_balances([120, -30, 50, -5, 0, 200]))
 # [120, 0, 50, 0, 0, 200]
@@ -46,11 +56,11 @@ print()
 
 #Task 4. Remove duplicates without set
 def unique_items(items):
-    result3 = []
+    result = []
     for i in items:
-        if i not in result3:
-            result3.append(i)
-    return result3
+        if i not in result:
+            result.append(i)
+    return result
 
 print(unique_items(["red", "blue", "red", "green", "blue"]))
 # ["red", "blue", "green"]
@@ -58,11 +68,11 @@ print()
 
 #Task 5. ADVANCED •Longest word
 def longest_word(words):
-    result4 = words[0]
+    result = words[0]
     for i in words:
-        if len(i)>len(result4):
-            result4 = i
-    return result4
+        if len(i)>len(result):
+            result = i
+    return result
 
 print(longest_word(["cat", "elephant", "python", "coffee"]))
 # "elephant"
