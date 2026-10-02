@@ -18,6 +18,7 @@ print_scores("Alex",60)
 def check_status_codes(*codes):
     for code in codes:
         assert code == 200
+    # return "All status codes are OK"
 
 print(check_status_codes(200,200,200))
 # print(check_status_codes(200,400,200))   AssertionError  assert code == 200

@@ -26,22 +26,22 @@ print(foo(5,3))
 #     return a+b
 # print(foo(5))
 
-def add_tests(name,resalts=[]):
-    resalts.append(name)
-    return resalts
+def add_tests(name,results=[]):
+    results.append(name)
+    return results
 
 print(add_tests("test_registration"))
-print(add_tests("test_ligin"))
+print(add_tests("test_login"))
 print()
 
-def add_tests(name,resalts=None):
-    if resalts is None:
-        resalts = []
-    resalts.append(name)
-    return resalts
+def add_tests(name,results=None):
+    if results is None:
+        results = []
+    results.append(name)
+    return results
 
 print(add_tests("test_registration"))
-print(add_tests("test_ligin"))
+print(add_tests("test_login"))
 print()
 
 def create_user2(username,email,role):
