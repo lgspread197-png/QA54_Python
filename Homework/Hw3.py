@@ -7,19 +7,23 @@
 # Вывод в консоль:  [5, 4, 3, 2, 1]
 
 def print_list_reverse(lst):
-    if lst is None or len(lst) == 0 or type(lst) is not list:
+    if lst is None or type(lst) is not list or len(lst) == 0:
         print("Wrong list")
         return
     else:
         lst.reverse()
         print(lst)
+        return
 
+# print(print_list_reverse([1, 2, 3, 4, 5]))
+# print(print_list_reverse((1, 2, 3, 4, 5)))
+# print(print_list_reverse([]))
+# print(print_list_reverse(None))
 
-print(print_list_reverse([1, 2, 3, 4, 5]))
 print_list_reverse([1, 2, 3, 4, 5])
-print(print_list_reverse((1, 2, 3, 4, 5)))
-print(print_list_reverse([]))
-print(print_list_reverse(None))
+print_list_reverse((1, 2, 3, 4, 5))
+print_list_reverse([])
+print_list_reverse(None)
 
 print("______________")
 #Task 2
