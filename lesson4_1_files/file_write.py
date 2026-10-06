@@ -34,13 +34,13 @@ file.close()
 # with == try/catch/finally (from java)
 # заменяет собой try ... finally, то есть закрытие произойдет даже в случае исключения
 
-# "r" - read - то же самое, что и "w" но он перезаписывает в существующий файл
+# "r" - read - это режим чтения существующего файла
 # "w" - write - создает и перезаписывает
 # "a" - append - добавляет в конец не стирая содержимое файла
 # "rb" - "wd" pdf, screenshot создает и перезаписывает в формате pdf и создает screenshot
 
 def log_res(test_name,status):
-    with open("test1.txt","a",encoding="utf-8") as file:
+    with open("test1.txt","w",encoding="utf-8") as file:
         file.write(f"{test_name}:{status}\n")
 log_res("test_register","PASSED")
 log_res("test_login", "FAILED")

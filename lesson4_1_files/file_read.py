@@ -18,7 +18,8 @@ with open("user.txt","r",encoding="utf-8") as file:
 #     ['Kristina\n', 'Alex\n']
     for line in lines:
         print(line.strip())
-# он уберает строку и пробелы - получилось
+# for - для каждой строки в списке строк напечатай  строку line -
+# где с учетом регистра \n каждая строка печатается без пробелов - получилось:
 # Kristina
 # Alex
 print("___")
