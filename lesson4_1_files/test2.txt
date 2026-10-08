@@ -1,0 +1,3 @@
+test_register:PASSED
+test_login:FAILED
+test_logout:FAILED

@@ -1,0 +1,12 @@
+test_register:PASSED
+test_login:FAILED
+test_logout:PASSED
+test_register:PASSED
+test_login:FAILED
+test_logout:FAILED
+test_register:PASSED
+test_login:FAILED
+test_logout:FAILED
+test_register:PASSED
+test_login:FAILED
+test_logout:FAILED
