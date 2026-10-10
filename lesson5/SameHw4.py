@@ -51,6 +51,7 @@ with open("shopping_list.txt","r",encoding="utf-8") as file:
 # Use csv.DictReader().
 
 def read_students(filename):
+    # мы вручную создали файл students.csv
     with open("students.csv","r",encoding="utf-8",newline="") as file:
         reader = csv.DictReader(file)
         for row in reader:
@@ -83,7 +84,9 @@ def create_reports_folder():
     reports_dir = Path("reports")
     reports_dir.mkdir(exist_ok=True)
     results_file = reports_dir/"result.txt"
+    # Оператор / соединяет путь к папке и имя файла (пока еще не создает файл, только путь)
     with open(results_file,"w",encoding="utf-8") as file:
         file.write("Homework completed successfully!")
+    # создает файл "result.txt" и записывает в него "Homework completed successfully!"
 create_reports_folder()
 

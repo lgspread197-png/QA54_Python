@@ -5,7 +5,7 @@ with open("user_csv.csv","w",encoding="utf-8",newline="") as file:
     writer = csv.writer(file)
 
     writer.writerow(["name","email","role"])
-    writer.writerow(["name", "lev@gm.com", "QA"])
+    writer.writerow(["Lev", "lev@gm.com", "QA"])
     writer.writerow(["Ivan", "ivan@gm.com", "dev"])
 
 with open("user_csv.csv") as file:
