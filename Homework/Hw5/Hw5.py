@@ -22,10 +22,7 @@ def save_test_ids(*test_ids):
     with open("tests.txt","w",encoding="utf-8") as file:
         for test_id in test_ids:
             file.write(test_id+"\n")
-            # file.write("QA-1001\n")    # - проверка на  пустые строки и пробелы
-            # file.write("   \n")
-            # file.write("  QA-1002  \n")
-            # file.write("\n")
+
 
 save_test_ids("QA-1001", "QA-1002", "QA-1003")
 
@@ -105,6 +102,10 @@ print(type(config["timeout"]))
 assert config["environment"] == "staging"
 assert config["base_url"] == "https://example.com"
 assert config["timeout"] == 30
+print(config["environment"]=="staging")
+result = config["timeout"] == 30
+print(result)
+assert result,"timeout"
 assert type(config["timeout"]) is int
 # Это проверка: тип значения timeout должен быть именно int
 # Если условие верно, программа продолжает работу. Если неверно, Python выдаёт ошибку AssertionError
