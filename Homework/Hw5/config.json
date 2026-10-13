@@ -1,0 +1,5 @@
+{
+    "environment": "staging",
+    "base_url": "https://example.com",
+    "timeout": 30
+}
