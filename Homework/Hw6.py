@@ -21,7 +21,7 @@ def get_product(products, index):
 products = ["coffee", "tea", "milk"]
 
 print(get_product(products, 0))
-print(get_product(products, 7))
+print(get_product(products, 13))
 print(get_product(products, -1))
 print()
 
@@ -73,7 +73,7 @@ def calculate_total_price(price, quantity):
     try:
         price = float(price)
         quantity = float(quantity)
-        return price + quantity
+        return price * quantity
     except ValueError:
         return "Value must be a number"
     except TypeError:
@@ -81,6 +81,7 @@ def calculate_total_price(price, quantity):
 
 print(calculate_total_price("12.5", "4"))
 print(calculate_total_price("coffee", "4"))
+print(calculate_total_price({"coffe"}, "4"))
 print(calculate_total_price(None, 4))
 print()
 
@@ -120,6 +121,8 @@ print()
 # ValueError("Discount cannot be greater than 100")
 
 def validate_discount(discount):
+    if type(discount) not in (int, float):
+        raise TypeError("Invalid discount type")
     if discount < 0:
         raise ValueError("Discount cannot be negative")
     if discount > 100:
@@ -129,4 +132,4 @@ def validate_discount(discount):
 validate_discount(50)
 validate_discount(0)
 # validate_discount(-5)
-validate_discount(150)
+# validate_discount(150)
