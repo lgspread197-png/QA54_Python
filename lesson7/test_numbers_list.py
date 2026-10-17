@@ -1,16 +1,27 @@
 import unittest
 
 class TestNumbersList(unittest.TestCase):
-    def setUp(self):
+# unittest.TestCase — родительский класс, который предоставляет инструменты для тестирования
+    def setUp(self):   # создаём метод подготовки к тесту
+# Метод setUp() автоматически выполняется перед каждым тестовым методом
         print("Preparing the list")
-        self.numbers = [1,2,3,4,5]
+        self.numbers = [1,2,3,4,5]    # создаём список чисел
+# self — это текущий объект класса, а numbers — переменная, принадлежащая этому объекту
+# Благодаря self.numbers другие методы этого же объекта могут обращаться к созданному списку
+# При запуске двух и более тестов setUp() будет выполнятся !каждый раз! отдельно !перед каждым тестом!
 
     def tearDown(self):
+# Метод tearDown() автоматически выполняется после каждого тестового метода, даже если тест завершился ошибкой
         print("Removing numbers")
+# Обрати внимание: несмотря на название, здесь список фактически не удаляется. Метод только выводит текст.
+# В реальных тестах tearDown() может использоваться для очистки временных файлов,
+# закрытия соединений или удаления тестовых данных
 
-    def test_list_has_five_numbers(self):
+    def test_list_has_five_numbers(self):  # Этот тест проверяет, что список содержит ровно пять элементов
         self.assertEqual(len(self.numbers),5)
+    # assertEqual(actual, expected) проверяет, равны ли два значения (Поскольку 5 == 5, тест проходит успешно.)
 
-    def test_list_has_four_number(self):
+    def test_list_contains_four(self):   # Этот тест проверяет, присутствует ли число 4 в списке
         self.assertIn(4,self.numbers)
-        # self.assertEqual(self.numbers[4],5)
+        # Метод assertIn() проверяет, находится ли один элемент внутри другой коллекции
+        # self.assertEqual(self.numbers[4],5)  # значение под индексом [4] будет 5, оно равно 5
