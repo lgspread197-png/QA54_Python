@@ -147,7 +147,7 @@ print("_____________3")
 
 def is_israel_mobile(phone):
     return bool(re.fullmatch(r"(05\d-?\d{7}|\+9725\d-\d{3}-\d{4}|058-\d{2}-\d{2}-\d{3})",phone))
-    return bool(re.fullmatch(r"(0|\+972)5\d(-?\d){7}",time))
+    # return bool(re.fullmatch(r"(0|\+972)5\d(-?\d){7}",time))
 
 # В шаблоне три варианта, разделённые символом | — ИЛИ.
 # - 05\d-?\d{7} — номер начинается с 05, затем цифра, необязательный дефис и ещё семь цифр.
